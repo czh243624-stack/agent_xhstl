@@ -1,17 +1,10 @@
 # 小红书研究台
 
-本项目是一个本地运行的小红书研究与发布辅助页面，用于账号登录、笔记搜索、内容读取、图文发布、互动操作和发布前内容检查。
+本项目是一个本地运行的小红书研究与发布辅助页面。仓库里已经带好本地运行程序，**不用再单独 git clone 其它仓库**。
 
 ## 启动
 
-先准备本地自动化服务目录：
-
-```powershell
-git clone https://github.com/xpzouying/xiaohongshu-mcp
-git clone https://github.com/4682B4LEE/xiaohongshu-content-checker
-```
-
-确认 `xiaohongshu-mcp\runtime` 中已有可执行文件后启动页面：
+在项目根目录执行：
 
 ```powershell
 pip install -r requirements.txt
@@ -23,6 +16,8 @@ pip install -r requirements.txt
 ```text
 http://127.0.0.1:1686
 ```
+
+`start-page.ps1` 会先拉起本地服务，再打开页面。第一次启动可能自动下载浏览器内核，需要等几分钟。
 
 ## 常用功能
 
@@ -58,4 +53,5 @@ $env:OPENAI_MODEL="gpt-4o-mini"
 
 - 本项目只建议本机研究使用。
 - 发布、评论、回复、点赞、收藏等操作会影响真实账号，请确认后再执行。
+- 登录态保存在本机，不会进 Git。
 - 小红书页面结构和风控规则可能变化，自动化能力可能需要后续维护。
