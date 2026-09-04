@@ -4,6 +4,7 @@ __pycache__/
 .impeccable/sketches/
 .impeccable/mocks/
 .impeccable/chrome-profile/
+.impeccable/
 .tools/
 xiaohongshu-mcp/
 chinese-sensitive-words-mcp/
@@ -11,3 +12,9 @@ xiaohongshu-content-checker/
 local-runtime/
 *.pid
 *.log
+DESIGN.md
+PRODUCT.md
+RESEARCH.md
+*需求方案*.md
+123.png
+xhs_standard_*.png
