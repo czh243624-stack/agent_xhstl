@@ -4,8 +4,6 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![善款已捐](https://img.shields.io/badge/善款已捐-CNY%201810.00-brightgreen?style=flat-square)](./DONATIONS.md)
-[![爱心汇聚](https://img.shields.io/badge/爱心汇聚-CNY%201524.64-blue?style=flat-square)](./DONATIONS.md)
 [![Docker Pulls](https://img.shields.io/docker/pulls/xpzouying/xiaohongshu-mcp?style=flat-square&logo=docker)](https://hub.docker.com/r/xpzouying/xiaohongshu-mcp)
 
 MCP for 小红书 / xiaohongshu.com。让你的 AI 助手直接访问小红书数据。
@@ -44,21 +42,6 @@ MCP for 小红书 / xiaohongshu.com。让你的 AI 助手直接访问小红书�
     <img alt="Star History Chart" src="https://raw.githubusercontent.com/xpzouying/xiaohongshu-mcp/star-history/assets/star-history.svg" />
   </picture>
 </a>
-
-## 赞赏支持
-
-本项目所有的赞赏都会用于慈善捐赠。所有的慈善捐赠记录，请参考 [DONATIONS.md](./DONATIONS.md)。
-
-**捐赠时，请备注 MCP 以及名字。**
-如需更正/撤回署名，请开 Issue 或通过邮箱联系。
-
-**支付宝（不展示二维码）：**
-
-通过支付宝向 **xpzouying@gmail.com** 赞赏。
-
-**微信：**
-
-<img src="donate/wechat@2x.png" alt="WeChat Pay QR" width="260" />
 
 ## 项目简介
 

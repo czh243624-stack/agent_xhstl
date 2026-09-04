@@ -4,8 +4,6 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-[![Philanthropy](https://img.shields.io/badge/Philanthropy-CNY%201810.00-brightgreen?style=flat-square)](./DONATIONS.md)
-[![Gratitude](https://img.shields.io/badge/Gratitude-CNY%201524.64-blue?style=flat-square)](./DONATIONS.md)
 [![Docker Pulls](https://img.shields.io/docker/pulls/xpzouying/xiaohongshu-mcp?style=flat-square&logo=docker)](https://hub.docker.com/r/xpzouying/xiaohongshu-mcp)
 
 MCP for RedNote (Xiaohongshu) / xiaohongshu.com. Give your AI assistant direct access to RedNote data.
@@ -44,21 +42,6 @@ If you run into problems deploying the traditional Docker version, **be sure to 
     <img alt="Star History Chart" src="https://raw.githubusercontent.com/xpzouying/xiaohongshu-mcp/star-history/assets/star-history.svg" />
   </picture>
 </a>
-
-## Appreciation and Support
-
-All donations received for this project will be used for charitable giving. For all charitable donation records, please refer to [DONATIONS.md](./DONATIONS.md).
-
-**When donating, please note "MCP" and your name.**
-If you need to correct/withdraw your name attribution, please open an Issue or contact via email.
-
-**Alipay (QR code not displayed):**
-
-Donate via Alipay to **xpzouying@gmail.com**.
-
-**WeChat:**
-
-<img src="donate/wechat@2x.png" alt="WeChat Pay QR" width="260" />
 
 ## Project Overview
 
