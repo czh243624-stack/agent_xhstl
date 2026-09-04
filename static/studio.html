@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141412">
+  <title>草稿台 · 小红书研究台</title>
+  <link rel="stylesheet" href="/static/styles.css?v=studio-1">
+  <link rel="stylesheet" href="/static/studio.css?v=studio-1">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/studio" aria-label="草稿台">
+        <span class="brand-mark" aria-hidden="true">稿</span>
+        <span><strong>草稿台</strong><small>TITLE · COVER · COPY</small></span>
+      </a>
+      <nav class="desk-nav" aria-label="页面切换">
+        <a href="/studio" aria-current="page">草稿台</a>
+        <a href="/">研究台</a>
+      </nav>
+    </header>
+
+    <main class="studio-grid">
+      <form class="ticket" id="draftForm">
+        <h1>先写种子，再出封面墙</h1>
+        <label for="topic">主题</label>
+        <input id="topic" name="topic" maxlength="80" required placeholder="例如：新手做小红书种草">
+        <label for="points">卖点 / 要点</label>
+        <textarea id="points" name="points" rows="5" maxlength="400" placeholder="每行一条，例如：&#10;先定栏目再写&#10;每天一篇就够&#10;评论区收需求"></textarea>
+        <label for="audience">给谁看</label>
+        <input id="audience" name="audience" maxlength="80" placeholder="例如：刚开始做内容的店主">
+        <button class="run-button" type="submit"><span>生成草稿</span></button>
+        <p class="ticket-note" id="sourceNote">标题和正文走规则模板；本机有模型时会自动换模型。封面是本地排版图，不是实拍。</p>
+      </form>
+
+      <section class="proofs" aria-label="封面和文案">
+        <div class="cover-wall" id="coverWall">
+          <div class="cover-empty">
+            <h2>还没有封面</h2>
+            <p>填左侧主题后生成。点选一张封面，再点一个标题，就能改配图字。</p>
+          </div>
+        </div>
+        <div class="copy-rail">
+          <div class="title-picks" id="titlePicks"></div>
+          <label for="bodyCopy">正文</label>
+          <textarea id="bodyCopy" rows="12" placeholder="生成后可以改"></textarea>
+          <p class="tags" id="tagList"></p>
+          <div class="export-row">
+            <button id="copyDraft" type="button" disabled>复制文案</button>
+            <button id="downloadCover" type="button" disabled>下载选中封面</button>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="/static/studio.js?v=studio-1" defer></script>
+</body>
+</html>

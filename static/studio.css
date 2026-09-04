@@ -1,0 +1,201 @@
+.desk-nav {
+  display: flex;
+  gap: 8px;
+}
+
+.desk-nav a {
+  color: var(--paper);
+  text-decoration: none;
+  min-height: 40px;
+  padding: 0 14px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(242, 239, 223, .22);
+  border-radius: 10px;
+}
+
+.desk-nav a[aria-current="page"] {
+  background: var(--acid);
+  color: var(--ink);
+  border-color: var(--acid);
+}
+
+.studio-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 340px) 1fr;
+  min-height: calc(100vh - 76px);
+}
+
+.ticket {
+  padding: 28px 22px 40px;
+  background: var(--paper);
+  color: var(--paper-text);
+  border-right: 1px solid var(--line);
+}
+
+.ticket h1 {
+  margin: 0 0 28px;
+  font-family: "Field Serif SC", "SimSun", serif;
+  font-size: 34px;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+.ticket label {
+  display: block;
+  margin: 16px 0 8px;
+  font-weight: 800;
+}
+
+.ticket input,
+.ticket textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: #fffdf4;
+  color: var(--paper-text);
+  border-radius: 10px;
+  padding: 12px 14px;
+}
+
+.ticket .run-button {
+  margin-top: 22px;
+  width: 100%;
+  min-height: 52px;
+}
+
+.ticket-note {
+  color: var(--paper-dim);
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.proofs {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.cover-wall {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  align-content: start;
+}
+
+.cover-empty,
+.cover-card {
+  background: var(--ink-2);
+  border-radius: 10px;
+}
+
+.cover-empty {
+  grid-column: 1 / -1;
+  min-height: 420px;
+  padding: 40px;
+}
+
+.cover-empty h2,
+.copy-rail label {
+  margin: 0 0 10px;
+  font-family: "Field Serif SC", "SimSun", serif;
+}
+
+.cover-card {
+  padding: 0;
+  border: 2px solid transparent;
+  overflow: hidden;
+}
+
+.cover-card.is-picked {
+  border-color: var(--acid);
+}
+
+.cover-card button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.cover-card img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  display: block;
+}
+
+.cover-card span {
+  display: block;
+  padding: 8px 10px 10px;
+  color: var(--text-dim);
+  font-size: 12px;
+}
+
+.title-picks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.title-picks button {
+  border: 1px solid rgba(242, 239, 223, .22);
+  background: transparent;
+  color: var(--paper);
+  border-radius: 999px;
+  padding: 8px 12px;
+}
+
+.title-picks button.is-picked {
+  background: var(--acid);
+  color: var(--ink);
+  border-color: var(--acid);
+}
+
+.copy-rail textarea {
+  width: 100%;
+  min-height: 280px;
+  border-radius: 10px;
+  border: 1px solid rgba(242, 239, 223, .22);
+  background: var(--ink-2);
+  color: var(--paper);
+  padding: 14px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: var(--acid);
+}
+
+.export-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.export-row button {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.export-row button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1100px) {
+  .studio-grid,
+  .proofs,
+  .cover-wall {
+    grid-template-columns: 1fr;
+  }
+}

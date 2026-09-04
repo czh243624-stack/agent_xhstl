@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#141412">
+  <title>小红书研究台</title>
+  <link rel="stylesheet" href="/static/styles.css?v=copy-11">
+</head>
+<body>
+  <!--
+  THESIS: 把研究会话变成可追踪的样本台，拒绝普通聊天应用的气泡流。
+  OWN-WORLD: 炭黑工作面、米白证物纸、荧光索引签和朱红批注；组件像标签、抽屉与样本夹。
+  STORY: 用户下达研究任务，看见工具返回，再把结果整理成可继续追问的证据。
+  FIRST VIEWPORT: 顶部横跨全宽的任务输入，左侧索引，中间样本纸，右侧行动轨迹；主操作位于输入末端。
+  FORM: 野外样本台，候选列表第 5 项，seed a4764997。
+  FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, and DESIGN.md
+  -->
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/" aria-label="小红书研究台首页">
+        <span class="brand-mark" aria-hidden="true">研</span>
+        <span><strong>小红书研究台</strong><small>XHS FIELD DESK</small></span>
+      </a>
+      <nav class="desk-nav" aria-label="页面切换">
+        <a href="/studio">草稿台</a>
+        <a href="/" aria-current="page">研究台</a>
+      </nav>
+      <div class="system-strip" aria-live="polite">
+        <span class="status-dot" id="serviceDot"></span>
+        <span id="serviceText">正在连接服务</span>
+        <span class="divider"></span>
+        <span id="loginText">检查登录状态</span>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <aside class="index-panel" aria-label="研究索引">
+        <div class="panel-title"><span>工具柜</span><b id="toolCount">18</b></div>
+        <div class="tool-filters" aria-label="工具筛选">
+          <button class="is-active" data-tool-filter="all">全部</button>
+          <button data-tool-filter="read">只读</button>
+          <button data-tool-filter="guarded">需确认</button>
+        </div>
+        <nav class="tool-catalog" id="toolCatalog" aria-label="工具目录" aria-live="polite">
+          <p class="catalog-loading">正在读取工具清单…</p>
+        </nav>
+
+        <div class="history-head"><span>本次记录</span><button id="clearHistory" type="button">清空</button></div>
+        <ol class="history-list" id="historyList">
+          <li class="history-empty">还没有采集记录</li>
+        </ol>
+        <p class="scope-note">全部 18 个工具均可访问。发布、互动、清 Cookie，以及会清未读的通知列表，都必须二次确认。</p>
+      </aside>
+
+      <section class="desk" aria-label="助手工作区">
+        <form class="command-bar" id="agentForm">
+          <label for="agentInput">给助手一个研究任务</label>
+          <div class="command-row">
+            <textarea id="agentInput" rows="2" maxlength="500" placeholder="例如：搜索 上海周末徒步" required></textarea>
+            <button class="run-button" type="submit">
+              <span>开始采集</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12 14-7-4 14-3-5-7-2Z"/><path d="m12 14 7-9"/></svg>
+            </button>
+          </div>
+          <div class="suggestions">
+            <button type="button" data-prompt="搜索 新中式家居">新中式家居</button>
+            <button type="button" data-prompt="搜索 通勤穿搭">通勤穿搭</button>
+            <button type="button" data-prompt="搜索 上海周末徒步">周末徒步</button>
+          </div>
+        </form>
+
+        <section class="tool-drawer" id="toolWorkbench" aria-labelledby="toolTitle" hidden>
+          <header class="tool-drawer-head">
+            <div>
+              <span id="toolRiskBadge">只读</span>
+              <h2 id="toolTitle">配置工具</h2>
+              <code id="toolMachineName"></code>
+            </div>
+            <button class="drawer-close" id="closeTool" type="button" aria-label="关闭工具配置">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+            </button>
+          </header>
+          <p class="tool-description" id="toolDescription"></p>
+          <form id="toolForm">
+            <div class="tool-fields" id="toolFields"></div>
+            <label class="confirm-row" id="confirmRow" hidden>
+              <input type="checkbox" id="confirmTool">
+              <span id="confirmCopy">我已检查参数，并确认执行这项操作。</span>
+            </label>
+            <div class="preflight-panel" id="preflightPanel" hidden>
+              <button class="preflight-button" id="preflightButton" type="button">发布前检测</button>
+              <div class="preflight-result" id="preflightResult">检测标题和正文，通过后再手动发布。</div>
+            </div>
+            <div class="tool-submit-row">
+              <p id="toolFormHint">参数按当前工具说明生成。</p>
+              <button class="execute-tool" id="executeTool" type="submit">执行工具</button>
+            </div>
+          </form>
+        </section>
+
+        <div class="desk-head">
+          <div><span>ACTIVE SPECIMEN</span><strong id="specimenId">XHS—000</strong></div>
+          <time id="specimenTime">等待任务</time>
+        </div>
+
+        <div class="specimen-wrap">
+          <span class="sheet-clip" aria-hidden="true"></span>
+          <article class="specimen-sheet" id="resultArea" aria-live="polite">
+            <div class="empty-state">
+              <div class="sample-glyph" aria-hidden="true"><span></span><span></span><span></span></div>
+              <h1>18 件工具，全部上台</h1>
+              <p>从左侧工具柜选中一项后，会按该工具的参数生成表单；写操作会在执行前拦住并要求确认。</p>
+              <button type="button" data-prompt="获取登录二维码">从登录开始</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <aside class="trace-panel" aria-label="助手行动轨迹">
+        <div class="panel-title"><span>执行轨迹</span><b>实时</b></div>
+        <div class="agent-card">
+          <div class="agent-avatar">XR</div>
+          <div><strong>小红书研究助手</strong><span>本地运行 · 18 个工具</span></div>
+        </div>
+        <ol class="trace-list" id="traceList">
+          <li class="trace-item is-done"><span class="trace-node"></span><div><b>服务握手</b><small>等待页面状态检查</small></div></li>
+          <li class="trace-item"><span class="trace-node"></span><div><b>任务解析</b><small>尚未收到研究任务</small></div></li>
+          <li class="trace-item"><span class="trace-node"></span><div><b>样本归档</b><small>结果会保留在当前会话</small></div></li>
+        </ol>
+        <div class="safety-stamp"><span>GUARD</span><p>全工具模式<br>写操作二次确认</p></div>
+      </aside>
+    </main>
+  </div>
+  <script src="/static/app.js?v=copy-11" defer></script>
+</body>
+</html>

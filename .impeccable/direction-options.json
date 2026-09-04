@@ -1,0 +1,75 @@
+{
+  "title": "给小红书研究 Agent 选一个工作台气质",
+  "question": "我会按你选的方向做成真正能输入任务、登录并展示研究结果的页面。",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "野外样本台",
+      "kicker": "推荐方向",
+      "lineage": "研究所样本抽屉、证物标签与观察记录",
+      "thesis": "每条笔记像一份有编号的样本，Agent 的检索过程成为可追踪的研究记录。",
+      "palette": ["#141412", "#f2efdf", "#d8ff3e", "#ff5a36"],
+      "materials": ["炭黑工作台", "荧光索引签", "米白证物纸"],
+      "viewport": "任务输入横跨顶部，中央是样本结果托盘，右侧竖列记录登录、工具调用与证据链。",
+      "risk": "标签与编号过多时容易显得忙乱，因此正文阅读区必须保持安静。",
+      "sketch": ".impeccable/sketches/field-sample-desk.webp"
+    },
+    {
+      "id": "challenger-teletext",
+      "label": "广播图文台",
+      "kicker": "高密度备选",
+      "lineage": "广播电视图文信息系统",
+      "thesis": "搜索、详情和状态像频道页一样被快速切换，极适合键盘操作。",
+      "palette": ["#050505", "#f3f3ec", "#00e7ff", "#ffe600"],
+      "materials": ["黑色显像屏", "像素字格", "广播色块"],
+      "viewport": "左侧三位页码导航，中间为 40 列研究页面，底部用彩色功能键发起任务。",
+      "risk": "强烈的像素语言会牺牲部分长中文内容的舒适度。",
+      "case": "信息密度和状态表达很强，但不如样本台适合长内容与证据比较。",
+      "sketch": ".impeccable/sketches/teletext-desk.webp",
+      "hero": "https://impeccable.style/worlds/cards/broadcast-programming-teletext-service-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/broadcast-programming-teletext-service.webp"
+    },
+    {
+      "id": "challenger-hypercard",
+      "label": "卡片盒工作站",
+      "kicker": "可玩性备选",
+      "lineage": "HyperCard 黑白卡片栈",
+      "thesis": "一次研究就是一叠可回溯的卡片，浏览、摘录和再提问都在原位完成。",
+      "palette": ["#ffffff", "#090909", "#c9c9c2", "#ffffff"],
+      "materials": ["一位像素纸", "手绘按钮", "点阵阴影"],
+      "viewport": "一张巨大的活动卡片占据中心，历史卡片从后方错位露出，工具按钮画在卡片边缘。",
+      "risk": "黑白限制很有个性，但弱化了图片内容本身。",
+      "case": "任务路径清晰、交互亲切，但小红书图片样本无法成为视觉主角。",
+      "sketch": ".impeccable/sketches/hypercard-desk.webp",
+      "hero": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/medium-native-hypercard-stack-shoebox.webp"
+    },
+    {
+      "id": "challenger-labanotation",
+      "label": "Agent 行动谱",
+      "kicker": "过程感备选",
+      "lineage": "拉班舞谱与垂直动作记谱",
+      "thesis": "每个工具调用都是一枚有时长的符号，研究过程从下向上生长。",
+      "palette": ["#f7f6f1", "#111111", "#c6c6be", "#ff5a36"],
+      "materials": ["白色谱纸", "黑色动作块", "铅灰时间带"],
+      "viewport": "中央垂直时间轴展示 Agent 行动，左右分别承载输入证据和输出结论。",
+      "risk": "新颖的时间方向需要学习，首次使用成本高于常规工作台。",
+      "case": "工具轨迹表达最强，但用户识别度和操作直觉弱于样本台。",
+      "sketch": ".impeccable/sketches/action-score.webp",
+      "hero": "https://impeccable.style/worlds/cards/notation-diagram-systems-labanotation-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/notation-diagram-systems-labanotation.webp"
+    }
+  ],
+  "reroll": true,
+  "canon": true,
+  "canonCard": {
+    "label": "标准 AI 工作台",
+    "thesis": "常见的左侧会话、中间聊天、右侧详情布局，按成熟产品标准完整执行。",
+    "palette": ["#f5f5f3", "#171717", "#ffffff", "#ff2442"],
+    "materials": ["浅灰应用框架", "白色面板", "克制品牌红"],
+    "viewport": "左侧历史列表，中间对话流，右侧 MCP 状态与结果摘要。",
+    "risk": "学习成本最低，但辨识度和研究氛围最弱。",
+    "sketch": ".impeccable/sketches/canon-chat.webp"
+  },
+  "steer": true
+}

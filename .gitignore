@@ -1,0 +1,13 @@
+.logs/
+.page.pid
+__pycache__/
+.impeccable/sketches/
+.impeccable/mocks/
+.impeccable/chrome-profile/
+.tools/
+xiaohongshu-mcp/
+chinese-sensitive-words-mcp/
+xiaohongshu-content-checker/
+local-runtime/
+*.pid
+*.log
